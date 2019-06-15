@@ -8,6 +8,12 @@
       "abbreviation": "D&B"
     },
     {
+      "uri": "configuration/sources/HR",
+      "label": "HR",
+      "icon": "images/source/reltio.png",
+      "abbreviation": "HR"
+    },
+    {
       "uri": "configuration/sources/Reltio",
       "label": "Reltio",
       "icon": "images/source/reltio.png",
@@ -8846,6 +8852,97 @@
         }
       ],
       "dataLabelPattern": "{Name}, {SKU}",
+      "abstract": false
+    },
+    {
+      "uri": "configuration/entityTypes/Employee",
+      "label": "Employee",
+      "description": "Employee",
+      "typeColor": "#056BFF",
+      "attributes": [{
+          "label": "First Name",
+          "name": "firstName",
+          "type": "String",
+          "hidden": false,
+          "important": false,
+          "system": false,
+          "uri": "configuration/entityTypes/Employee/attributes/firstName",
+          "skipInDataAccess": false
+        },
+        {
+          "label": "Last Name",
+          "name": "lastName",
+          "type": "String",
+          "hidden": false,
+          "important": false,
+          "system": false,
+          "uri": "configuration/entityTypes/Employee/attributes/lastName",
+          "skipInDataAccess": false
+        },
+        {
+          "label": "Title",
+          "name": "title",
+          "type": "String",
+          "hidden": false,
+          "important": false,
+          "system": false,
+          "uri": "configuration/entityTypes/Employee/attributes/title",
+          "skipInDataAccess": false
+        },
+        {
+          "label": "Employee Status",
+          "name": "status",
+          "type": "String",
+          "hidden": false,
+          "important": false,
+          "system": false,
+          "uri": "configuration/entityTypes/Employee/attributes/status",
+          "skipInDataAccess": false
+        },
+        {
+          "label": "Employee Start Date",
+          "name": "startDate",
+          "type": "Date",
+          "hidden": false,
+          "important": false,
+          "system": false,
+          "uri": "configuration/entityTypes/Employee/attributes/startDate",
+          "skipInDataAccess": false
+        },
+        {
+          "label": "Employee Achievement",
+          "name": "empAchievememnt",
+          "type": "Nested",
+          "hidden": false,
+          "important": false,
+          "system": false,
+          "uri": "configuration/entityTypes/Employee/attributes/empAchievememnt",
+          "dataLabelPattern": "{Achievement Type}: {Achievement Name}",
+          "attributes": [{
+              "label": "Achievement Type",
+              "name": "achType",
+              "type": "String",
+              "hidden": false,
+              "important": false,
+              "system": false,
+              "uri": "configuration/entityTypes/Employee/attributes/empAchievememnt/attributes/achType",
+              "skipInDataAccess": false
+            },
+            {
+              "label": "Achievement Name",
+              "name": "achName",
+              "type": "String",
+              "hidden": false,
+              "important": false,
+              "system": false,
+              "uri": "configuration/entityTypes/Employee/attributes/empAchievememnt/attributes/achName",
+              "skipInDataAccess": false
+            }
+          ],
+          "skipInDataAccess": false
+        }
+      ],
+      "dataLabelPattern": "{First Name}, {Last Name}",
       "abstract": false
     }
   ],

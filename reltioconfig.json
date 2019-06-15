@@ -9715,6 +9715,30 @@
         }
       ],
       "direction": "directed"
+    },
+    {
+      "uri": "configuration/relationTypes/Occupation",
+      "label": "Works At",
+      "description": "Employee Works for Organization",
+      "typeColor": "#AA3A44",
+      "startObject": {
+        "uri": "configuration/relationTypes/Employee/startObject",
+        "directionalContext": [{
+          "uri": "configuration/relationTypes/Employee/startObject/directionalContext",
+          "labelPattern": "Works At"
+        }],
+        "objectTypeURI": "configuration/entityTypes/Employee"
+      },
+      "endObject": {
+        "uri": "configuration/relationTypes/Organization/endObject",
+        "directionalContext": [{
+          "uri": "configuration/relationTypes/Organization/endObject/directionalContext",
+          "labelPattern": "Employs"
+        }],
+        "objectTypeURI": "configuration/entityTypes/Organization"
+      },
+      "implicit": false,
+      "direction": "directed"
     }
   ],
   "interactionTypes": [{
